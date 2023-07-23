@@ -1,0 +1,19 @@
+.container {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.cardWrapper {
+    width: 80vw;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+    .cardWrapper {
+        flex-direction: column;
+        margin: 35px auto;
+    }
+}

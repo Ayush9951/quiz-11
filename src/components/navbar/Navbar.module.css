@@ -1,0 +1,139 @@
+.navbarContainer {
+  max-width: 100vw;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(108, 99, 255);
+  color: white;
+}
+
+.title {
+  flex: 1;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 28px;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.itemContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 600px;
+  height: 40px;
+  margin: 8px;
+  background: white;
+  color: black;
+}
+
+.item {
+  font-size: 15px;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  font-weight: 400;
+
+  &:hover {
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+}
+
+.buttonContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button {
+  padding: 8px;
+  margin-right: 50px;
+  margin-bottom: 8px;
+  border: none;
+  background: white;
+  color: black;
+  width: 100px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
+
+.mobileNavbarContainer {
+  display: none;
+}
+
+.mobileButtonContainer {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .navbarContainer {
+    display: none;
+  }
+
+  .mobileNavbarContainer {
+    background-color: rgb(108, 99, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    padding: 15px;
+    top: 0;
+  }
+
+  .mobileNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobileTitle {
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+
+  .mobileItemContainer {
+    margin: 18px 3px;
+  }
+
+  .mobileItem {
+    color: white;
+    line-height: 35px;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+
+  .mobileButtonContainer {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+  }
+
+  .mobileButton {
+    background: white;
+    color: black;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+  }
+
+  .mobileButton:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
+}
