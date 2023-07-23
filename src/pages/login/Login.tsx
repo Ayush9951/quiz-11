@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Login.module.css";
+import SignUp from "../signup/SignUp";
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -14,7 +15,16 @@ const Login = () => {
     }));
   };
 
-  console.log(input);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  console.log(open);
 
   return (
     <>
@@ -43,9 +53,10 @@ const Login = () => {
             type="password"
           />
           <button className={styles.button}>Login</button>
-          <a className={styles.link}>Create Account</a>
+          <a className={styles.link} onClick={handleOpen}>Create Account</a>
         </form>
       </div>
+      <SignUp open={open} closeModal={handleClose} />
     </>
   );
 };
