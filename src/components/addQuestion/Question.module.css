@@ -1,0 +1,82 @@
+.container {
+  width: 450px;
+  margin: 25px auto;
+  padding: 35px;
+  background: white;
+  font-family: sans-serif;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.wrapper {
+  margin-bottom: 5px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 425px;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgb(163, 153, 153);
+  font-size: 14px;
+}
+
+.textArea {
+  width: 425px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.textArea:focus {
+  outline: none;
+}
+
+.textArea::placeholder {
+  color: rgb(163, 153, 153);
+  font-size: 15px;
+}
+
+.select {
+  padding: 10px;
+  width: 450px;
+  color: rgb(163, 153, 153);
+  font-size: 14px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.button {
+  background-color: rgb(108, 99, 255);
+  color: white;
+  border: none;
+  width: 150px;
+  padding: 12px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -5,8 +5,8 @@ import SignUp from "./pages/signup/SignUp";
 const App = () => {
   return (
     <>
-      <Login />
-      {/* <Admin /> */}
+      {/* <Login /> */}
+      <Admin />
     </>
   );
 };
