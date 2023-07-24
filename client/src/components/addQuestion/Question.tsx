@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "./Question.module.css";
 import { Modal } from "@mui/material";
+import { addQuestion } from "../../service/api";
 
 const Question = (props: any) => {
   const [title, setTitle] = useState<string>();
@@ -41,6 +42,25 @@ const Question = (props: any) => {
       </option>
     );
   }
+
+  const formDetails = {
+    title,
+    desc,
+    options,
+    branch,
+    subject,
+    correctAnswerNumber: answer,
+  };
+
+  const saveQuestion = async () => {
+    await addQuestion(formDetails)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <Modal
@@ -159,7 +179,9 @@ const Question = (props: any) => {
               {answersDivs}
             </select>
           </div>
-          <button className={styles.button}>Save</button>
+          <button className={styles.button} onClick={saveQuestion}>
+            Save
+          </button>
         </div>
       </div>
     </Modal>
